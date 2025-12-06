@@ -23,7 +23,14 @@
   </style>
 </head>
 <body>
+
   <h1>The answer is in this voice.</h1>
+
+  <!-- AUDIO PLAYER -->
+  <audio controls>
+    <source src="stego_riddle5_noise.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
 
   <p>Enter the password:</p>
 
@@ -32,7 +39,7 @@
 
   <script>
     function check() {
-      const key = "YOUR_ANSWER"; // ganti nanti sesuai jawaban teka-teki
+      const key = "tomorrow"; // password dari teka-teki
       const user = document.getElementById("answer").value.toLowerCase().trim();
 
       if (user === key.toLowerCase()) {
@@ -42,5 +49,6 @@
       }
     }
   </script>
+
 </body>
 </html>
