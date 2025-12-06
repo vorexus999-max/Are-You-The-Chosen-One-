@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Are you ready?</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>The answer is in this voice.</h1>
+
+  <p>Enter the password:</p>
+
+  <input id="answer" type="text" />
+  <button onclick="check()">Submit</button>
+
+  <script>
+    function check() {
+      const key = "YOUR_ANSWER"; // ganti nanti sesuai jawaban teka-teki
+      const user = document.getElementById("answer").value.toLowerCase().trim();
+
+      if (user === key.toLowerCase()) {
+        window.location.href = "page2.html";
+      } else {
+        alert("Wrong answer.");
+      }
+    }
+  </script>
+</body>
+</html>
